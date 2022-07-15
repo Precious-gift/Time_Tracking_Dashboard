@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    color: var(--pale-blue);
+}
+
+:root {
+    --blue: hsl(246, 80%, 60%);
+    --light-red-work: hsl(15, 100%, 70%);
+    --soft-blue: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --lime-green: hsl(145, 58%, 55%);
+    --violet: hsl(264, 64%, 52%);
+    --soft-orange: hsl(43, 84%, 65%);
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile {
+    width: 20%;
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+}
+
+.activities {
+    width: 75%;
+}
+
+.dp img {
+    display: block;
+    width: 50%;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.dp-name h1 {
+    margin: 0;
+    font-weight: 300;
+    color: #fff;
+    font-size: 32px;
+}
+
+.dp-name p {
+    margin: 0;
+}
+
+.name {
+    background-color: var(--blue);
+    padding: 20px 20px 40px 20px;
+    border-radius: 10px;
+}
+
+.dp-name {
+    margin-top: 20px;
+}
+
+.time ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.time {
+    padding: 20px;
+}
+
+.time ul li:not(:first-of-type) {
+    margin-top: 15px;
+}
+
+.time ul li:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.activities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.activity {
+    width: 30%;
+    height: 47%;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.end {
+    align-self: flex-end;
+}
+
+.first, .second, .third, .fourth, .fifth, .sixth {
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: -8px;
+    background-size: 25%;
+}
+
+.first {
+    background-image: url(images/icon-work.svg);
+    background-color: var(--light-red-work);
+}
+
+.second {
+    background-image: url(images/icon-play.svg);
+    background-color: var(--soft-blue);
+}
+
+.third {
+    background-image: url(images/icon-study.svg);
+    background-color: var(--light-red-study);
+}
+
+.fourth {
+    background-image: url(images/icon-exercise.svg);
+    background-color: var(--lime-green);
+}
+
+.fifth {
+    background-image: url(images/icon-social.svg);
+    background-color: var(--violet);
+}
+
+.sixth {
+    background-image: url(images/icon-self-care.svg);
+    background-color: var(--soft-orange);
+}
+
+.info {
+    height: 80%;
+    width: 100%;
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.info:hover {
+    background-color: var(--desaturated-blue);
+    cursor: pointer;
+}
+
+.info p {
+    margin: 0;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+}
+
+.title div {
+    width: 50%;
+    text-align: right;
+}
+
+.title p {
+    width: 50%;
+    color: #fff;
+}
+
+.hours h1 {
+    margin: 0;
+    font-weight: 300;
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hours {
+    margin-top: 20px;
+}
+
+.hours p {
+    font-size: 14px;
+}
+
+.active {
+    color: #fff;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+
+    body {
+        height: auto;
+    }
+
+    .profile {
+        width: 100%;
+    }
+
+    .name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .dp {
+        width: 28%;
+    }
+
+    .dp img {
+        width: 100%;
+    }
+
+    .dp-name {
+        width: 68%;
+        margin: 0;
+    }
+
+    .dp-name h1, .hours h1 {
+        font-size: 18px;
+    }
+
+    .dp-name p {
+        font-size: 14px;
+    }
+
+    .time ul {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
+    .time ul li:not(:first-of-type) {
+        margin-top: 0px;
+    }
+
+    .activities {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .activity {
+        width: 100%;
+        margin-top: 20px;
+        height: 120px;
+    }
+
+    .hours {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hours h1 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .hours p {
+        font-size: 12px;
+    }
+
+    .info {
+        padding: 15px;
+    }
+
+}
